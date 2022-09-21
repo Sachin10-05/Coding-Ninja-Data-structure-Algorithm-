@@ -1,5 +1,10 @@
 /*
+problems:
+**********
+
 Given an integer N, count and return the number of zeros that are present in the given integer using recursion.
+Constraints :  0 <= N <= 10^9
+
 Sample Input 1 :
 0
 Sample Output 1 :
@@ -20,41 +25,46 @@ Sample Output 3 :
 
 
 
+***************************************************************************************************************************************************************************
 
+//solution:
+************
 
-
-
-
-
-
-
-#include<bits/stdc++.h>
-using namespace std;
-int count(int x)
+int count(int n)
 {
-    if(x==0)
-        return 0;
-    if(x%10==0)
-        return 1+count(x/10);
-    else 
-        return count(x/10);
+   static int c = 0; //count of zeros
+   //base case
+   if(n==0)
+      return c;
+   if(n%10 == 0)
+      c++;
+   return count(n/10);
 }
 
-int countZeros(int n) 
+
+int countZeros(int n)
 {
-    // Write your code here
-    if(n==0)
-        return 1;
-    else
-        return count(n);
+   //Edge case
+   if(n==0)
+      return 1;
+   else
+      return count(n);
 }
+
 
 int main() 
 {
-    int n;
-    cin >> n;
-    cout << countZeros(n) << endl;
+   int n;
+   cin >> n;
+   cout << countZeros(n) << endl;
 }
+
+
+
+
+
+
+***************************************************************************************************************************************************************************
 
 
 
