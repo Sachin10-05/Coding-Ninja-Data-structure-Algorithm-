@@ -20,13 +20,22 @@
       * Address Typecasting:  i) implicit Typecasting
                               ii)Explicit Typecasting
       * Pass By Value & Pass By Reference
-      * Dynamic Memory Allocation:  * Variables
-                                    * Arrays
+      * Dynamic Memory Allocation:    * Variables: int *x = new int;    //This dosn't mean array is "dynamic array".
+                                      * Arrays: int *arr = new int[size];
+      * Dynamic Memory Deallocation:  
+                                      * Variables: delete x;
+                                      * Arrays:    delete[] arr;
+      * Note:- 
+              * The memory declaration using heap memory is known as dynamic memory allocation.
+              * While the one using stack is known as compile-time memory allocation.
+              * Global variables are stored using Heap memory.
+                   
       * Dynamic Allocation of 2D-Array
       * Jagged Array
       * Macros and Global Variable
       * Inline and Default Arguments
-      * Constant Variables
+      * Constant Variables - const 
+      * MCQs
 
 
 
