@@ -47,7 +47,6 @@ void removeX(char arr[])
 {
    char ans[100];
    int size = helper(arr,ans);
-   cout << size << endl;
    for(int i=0;i<size;i++)
    {
       arr[i] = ans[i];
