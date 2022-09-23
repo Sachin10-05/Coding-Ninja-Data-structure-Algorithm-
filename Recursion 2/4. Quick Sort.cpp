@@ -45,7 +45,7 @@ Sample Output 1 :
 * Time Complexity: worst case : O(N^2)
                    Best case: O(N*log(N))
                    Avg case:  O(N*log(N))
-* Space complexity:
+* Space complexity: O(N)
 
 * Why Quick Sort is preferred over MergeSort for sorting Arrays ?
 * Why MergeSort is preferred over QuickSort for Linked Lists ? 
