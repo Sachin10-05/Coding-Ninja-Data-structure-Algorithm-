@@ -49,6 +49,8 @@
       * Recursion and PMI: * Base case
                            * Recursive call
                            * Important calculations
+      * Types:  * Tail Recursion
+                * Head Recursion
       * Fibonacci Numbers
       * Recursion and Arrays
       problems:
@@ -127,7 +129,17 @@
 
 6) Time and Space Complexity Analysis
 **************************************
-      *     
+      * Time Complexity:- i)  Best case
+                          ii) Avg case
+                          iii)worst case
+      * MCQs
+      *Assignments:    * Find the unique element
+                       * Duplicate in Array
+                       * Array Intersection
+                       * Pair Sum in Array
+                       * Triplet Sum
+                       * Rotate Array
+                       * Check Array Rotation
 
 
 
@@ -138,6 +150,10 @@
 
 7) Test-1
 **********
+      * MCQs
+      * Does s contain t?
+      * Maximum profit on App
+      * Split Array
 
 
 
@@ -148,7 +164,23 @@
 
 8) OOPs-1
 **********
-
+      * What is OOPs?
+      * Class & Objects
+      * Data Members & member functions
+      * Access Modifiers - i)  public
+                           ii) private
+                           iii)protected
+      * Getter & Setter
+      * Constructor   - i) Default 
+                        ii)Parameterized
+      * Destructors
+      * this keyword
+      * Fraction class
+      * Complex Number Class
+      * MCQs
+      problem:
+      --------
+           * Complex Number Class
 
 
 
@@ -158,6 +190,17 @@
 
 9) OOPs-2
 **********
+      * Shallow & Deep Copy
+      * Copy constructor
+      * Initialisation List
+      * Constant Function
+      * Static member
+      * Operator Overloading
+      * Dynamic Array Class
+      
+      problem
+      -------
+           * Polynomial class 
 
 
 
@@ -165,6 +208,51 @@
 
 
 *******************************************************************************************************************************************************************************
+
+10) Linked List 1
+*******************
+
+
+
+
+
+
+
+*******************************************************************************************************************************************************************************
+
+11) Linked List 2
+******************
+
+
+
+
+
+
+
+*******************************************************************************************************************************************************************************
+
+12) Stacks & Queues
+********************
+
+
+
+
+
+
+
+*******************************************************************************************************************************************************************************
+
+13) Test-2
+***********
+
+
+
+
+
+
+
+
+
 
 
 
