@@ -96,9 +96,9 @@
       * Recursion and Strings
       * Merge Sort 
       * Quick Sort
-      * String:  i)  Subsequence
-                 ii) Subset
-                 iii)Permutations
+      * String:  i)  Subsequence/ Subset ---> (2^N)
+                 ii) Permutations ----------> (N!)
+                 iii)Substrings** ----------> N*(N+1)/2
       problems:
       ---------
           * Replace Character recursively
@@ -113,7 +113,7 @@
                             * Return Subset of an Array
                             * Print Subsets of Array
                             * Return Subsets sum to K
-                            * Print Subsets sum to K
+                            * Print Subsets sum to K**
                             * return all code - string
                             * Print All Codes - string
                             * Return Permutation - String
@@ -136,10 +136,10 @@
       *Assignments:    * Find the unique element
                        * Duplicate in Array
                        * Array Intersection
-                       * Pair Sum in Array
-                       * Triplet Sum
-                       * Rotate Array
-                       * Check Array Rotation
+                       * Pair Sum in Array**
+                       * Triplet Sum**
+                       * Rotate Array**
+                       * Check Array Rotation**
 
 
 
