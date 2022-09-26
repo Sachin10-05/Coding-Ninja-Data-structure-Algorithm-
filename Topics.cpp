@@ -153,7 +153,7 @@
       * MCQs
       * Does s contain t?
       * Maximum profit on App
-      * Split Array
+      * Split Array**
 
 
 
@@ -211,6 +211,41 @@
 
 10) Linked List 1
 *******************
+      * Advantages of Array
+      * Disadvantages of Array
+      * Advantages of LL
+      * Linked List:  > Node class
+                      > Input of LL
+                      > Print of LL
+                      
+      * Types of LL:  * Singly LL
+                      * Doubly LL
+                      * Circular LL
+               
+      * Operation of LL:  -------> Iteratively
+                          -------> Recursively
+             * Insertion of Node:  
+                  > At beginning
+                  > At last
+                  > At middle anywhere
+             * Deletion of Node:   
+                  > Deletion of Head pointer
+                  > Deletion of any Node
+      * MCQs
+      
+      problems:
+      ---------
+          * Length of LL
+          * print ith Node
+          * Delete Node
+          * Length of LL (recursively)
+          * Insert Node (recursively)
+          * Delete Node (recursively)
+          * Assignment:    * Find a Node in LL
+                           * Append Lat N to First
+                           * Eliminate duplicate from LL
+                           * print reverse LL
+                           * Palindrome LL
 
 
 
@@ -222,6 +257,25 @@
 
 11) Linked List 2
 ******************
+      * Mid point of LL
+      * Merge two sorted LL
+      * Merge sort over LL
+      * Reverse LL ------> recursively
+                   ------> iteratively
+      *MCQs
+      problems:
+      ---------
+           * Mid-point of LL
+           * Merge two Sorted LL
+           * Merge Sort
+           * Reverse LL (recursive)
+           * Reverse LL (iteratively)
+           * Assignment:    * Find a Node in LL (recursive)
+                            * Even after Odd LL
+                            * Delete Every N Nodes
+                            * Swap two Nodes of LL
+                            * k Reverse
+                            * Bubble Sort (iterative) LL
 
 
 
