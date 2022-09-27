@@ -44,13 +44,13 @@ using namespace std;
 class Node
 {
    public:
-	 int data;
-	 Node *next;
-	 Node(int data)
-	 {
-	    this->data = data;
-		  this->next = NULL;
-	 }
+   int data;
+   Node *next;
+   Node(int data)
+   {
+      this->data = data;
+      this->next = NULL; 
+   }
 };
 
 
@@ -58,24 +58,24 @@ class Node
 Node *takeinput()
 {
    int data;
-	 cin >> data;
-	 Node *head = NULL, *tail = NULL;
-	 while (data != -1)
-	 {
-	    Node *newnode = new Node(data);
-		  if (head == NULL)
-		  {
-			   head = newnode;
-			   tail = newnode;
-		  }
-		  else
-		  {
-			   tail->next = newnode;
-			   tail = newnode;
-		  }
-		  cin >> data;
-	 }
-	 return head;
+   cin >> data;
+   Node *head = NULL, *tail = NULL;
+   while (data != -1)
+   {
+      Node *newnode = new Node(data);
+      if (head == NULL)
+      {
+         head = newnode;
+	 tail = newnode;
+      }
+      else
+      {
+         tail->next = newnode;
+	 tail = newnode;
+      }
+      cin >> data;
+   }
+   return head;
 }
 
 
@@ -83,12 +83,12 @@ Node *takeinput()
 void print(Node *head)
 {
    Node *temp = head;
-	 while (temp != NULL)
-	 {
-	    cout << temp->data << " ";
-		  temp = temp->next;
-	 }
-	 cout << endl;
+   while (temp != NULL)
+   {
+      cout << temp->data << " ";
+      temp = temp->next;
+   }
+   cout << endl;
 }
 
 
@@ -96,6 +96,13 @@ void print(Node *head)
 //ITERATIVE
 Node *appendLastNToFirst(Node *head, int n)
 {
+   //Edge case
+   if(n==0)
+      return head;
+    
+   else if(head == NULL)
+      return head;
+        
    //find tail
    Node *tail = head;
    int count=0;
@@ -125,16 +132,16 @@ Node *appendLastNToFirst(Node *head, int n)
 int main()
 {
    int t;
-	 cin >> t;
-	 while (t--)
-	 {
-	    Node *head = takeinput();
-		  int n;
-		  cin >> n;
-		  head = appendLastNToFirst(head, n);
-		  print(head);
-	 }
-	 return 0;
+   cin >> t;
+   while (t--)
+   {
+      Node *head = takeinput();
+      int n;
+      cin >> n;
+      head = appendLastNToFirst(head, n);
+      print(head);
+   }
+   return 0;
 }
 
 
