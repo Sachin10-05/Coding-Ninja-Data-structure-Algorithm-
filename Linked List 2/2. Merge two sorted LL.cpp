@@ -30,6 +30,10 @@ Sample Output 1 :
         step3 - Add node with smaller data to new LL
         step4 - Return newHead
         
+//T.C = O(M+N)
+//S.C = O(M+N)
+        
+        
         
 Node *mergeTwoSortedLinkedLists(Node *head1, Node *head2)
 {
@@ -85,6 +89,7 @@ Node *mergeTwoSortedLinkedLists(Node *head1, Node *head2)
 
 
 
+
 ****************************************************************************************************************************************************************************
 ****************************************************************************************************************************************************************************
 ****************************************************************************************************************************************************************************
@@ -93,6 +98,71 @@ Node *mergeTwoSortedLinkedLists(Node *head1, Node *head2)
 //solution-2
 *************
 
+** Algo: i)  step1 - Edge case: if head1 is empty return head2 and vice-versa.
+        ii)  step2 - we need to add all node in head1 only to avoid extra space.
+        iii) step3 - Compare both LL and add to first LL
+        iv)  step4:
+                * if curr2->data lies between curr1->data and next1->data , Then add it.
+                * else move curr1 and next1 to forward
+                * Also check if next1==NULL then add all curr to curr1->next
+
+// T.C = O(M+N)
+// S.C = O(1)
+
+
+
+
+Node *helper(Node *head1, Node *head2)
+{
+   Node *curr1 = head1;
+   Node *next1 = curr1->next;
+    
+   Node *curr2 = head2;
+   Node *next2 = curr2->next;
+    
+   while(curr1!=NULL && next1!=NULL && curr2!=NULL)
+   {
+      if((curr2->data >= curr1->data)  &&  (curr2->data <= next1->data))
+      {
+         curr1->next = curr2;
+         next2 = curr2->next;
+         curr2->next = next1;
+         curr1 = curr2;
+         curr2 = next2;
+      }
+      else
+      {
+         curr1 = next1;
+         next1 = next1->next;
+         if(next1 == NULL)
+         {
+            curr1->next = curr2;
+            return head1;
+         }
+      }
+   }
+   return head1;
+}
+
+
+
+
+Node *mergeTwoSortedLinkedLists(Node *head1, Node *head2)
+{
+   if(head1 == NULL)
+      return head2;
+	
+   else if(head2 == NULL)	
+      return head1;
+    
+   else
+   {
+      if(head1->data > head2->data)
+         return helper(head2, head1);
+      else
+         return helper(head1, head2);
+   }
+}
 
 
 
@@ -100,9 +170,10 @@ Node *mergeTwoSortedLinkedLists(Node *head1, Node *head2)
 
 
 
-
-
-
+****************************************************************************************************************************************************************************
+****************************************************************************************************************************************************************************
+****************************************************************************************************************************************************************************
+****************************************************************************************************************************************************************************
 
 
 
