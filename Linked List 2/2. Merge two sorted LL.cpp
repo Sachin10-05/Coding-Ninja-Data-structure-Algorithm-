@@ -114,6 +114,13 @@ Node *mergeTwoSortedLinkedLists(Node *head1, Node *head2)
 
 Node *helper(Node *head1, Node *head2)
 {
+   //if only one node is present in LL1
+   if(head1->next == NULL)
+   {
+      head1->next = head2;
+      return head1;
+   }
+			
    Node *curr1 = head1;
    Node *next1 = curr1->next;
     
