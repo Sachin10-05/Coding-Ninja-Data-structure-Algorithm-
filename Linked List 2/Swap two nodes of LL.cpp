@@ -48,28 +48,62 @@ Sample Output 1 :
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Node *swapNodes(Node *head, int i, int j)
+{
+   //Edge Case:
+   if(i==j)
+      return head;
+    
+   //step-1:
+   //Traverse to find Node at i
+   Node *prev1 = NULL;
+   Node *curr1 = head;
+   int count1 = 0;
+   while(curr1!=NULL && count1<i)
+   {
+      count1++;
+      prev1 = curr1;
+      curr1 = curr1->next;
+   }
+    
+   //step-2:
+   //Traverse to find Node at j
+   Node *prev2 = NULL;
+   Node *curr2 = head;
+   int count2 =  0;
+   while(curr2!=NULL && count2<j)
+   {
+      count2++;
+      prev2 = curr2;
+      curr2 = curr2->next;
+   }
+    
+    
+   if(prev1!=NULL) 
+   {
+      prev1 -> next = curr2;
+   } 
+   else 
+   {
+      head = curr2;
+   }
+    
+   if(prev2!=NULL) 
+   {
+      prev2 -> next = curr1;
+   } 
+   else 
+   {
+      head = curr1;
+   }
+    
+   //swapping Node curr1 and curr2
+   Node *temp = curr2 -> next;
+   curr2 -> next = curr1 -> next;
+   curr1 -> next = temp;
+    
+   return head;
+}
 
 
 
@@ -80,74 +114,76 @@ Sample Output 1 :
 main-code:
 ----------
   
+/*
 #include <iostream>
 using namespace std;
 
 class Node
 {
    public:
-	 int data;
-	 Node *next;
-	 Node(int data)
-	 {
-	    this->data = data;
-		  this->next = NULL;
-	 }
+   int data;
+   Node *next;
+   Node(int data)
+   {
+      this->data = data;
+      this->next = NULL;
+   }
 };
-
 
 
 
 Node *takeinput()
 {
-	int data;
-	cin >> data;
-	Node *head = NULL, *tail = NULL;
-	while (data != -1)
-	{
-		Node *newnode = new Node(data);
-		if (head == NULL)
-		{
-			head = newnode;
-			tail = newnode;
-		}
-		else
-		{
-			tail->next = newnode;
-			tail = newnode;
-		}
-		cin >> data;
-	}
-	return head;
+   int data;
+   cin >> data;
+   Node *head = NULL, *tail = NULL;
+   while (data != -1)
+   {
+      Node *newnode = new Node(data);
+      if (head == NULL)
+      {
+         head = newnode;
+	 tail = newnode;
+      }
+      else
+      {
+         tail->next = newnode;
+	 tail = newnode;
+      }
+      cin >> data;
+   }
+   return head;
 }
+
 
 void print(Node *head)
 {
-	Node *temp = head;
-	while (temp != NULL)
-	{
-		cout << temp->data << " ";
-		temp = temp->next;
-	}
-	cout << endl;
+   Node *temp = head;
+   while (temp != NULL)
+   {
+      cout << temp->data << " ";
+      temp = temp->next;
+   }
+   cout << endl;
 }
+
 
 int main()
 {
-	int t;
-	cin >> t;
-	while (t--)
-	{
-		int i, j;
-		Node *head = takeinput();
-		cin >> i;
-		cin >> j;
-		head = swapNodes(head, i, j);
-		print(head);
-	}
-	return 0;
+   int t;
+   cin >> t;
+   while (t--)
+   {
+      int i, j;
+      Node *head = takeinput();
+      cin >> i;
+      cin >> j;
+      head = swapNodes(head, i, j);
+      print(head);
+   }
+   return 0;
 }
-
+*/
 
 
 
