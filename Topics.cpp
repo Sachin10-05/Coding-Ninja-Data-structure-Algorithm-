@@ -304,41 +304,43 @@
 12) Stacks & Queues
 ********************
       * Abstract Data Type (ADT)
-      * Types of Data Abstraction:  i)  Procedural Abstraction
-                                    ii) Modular(File) Abstraction
-                                    iii)Object-Oriented Programming (OOPs)
+      * Types of Data Abstraction: ---------> Procedural Abstraction
+                                   ---------> Modular(File) Abstraction
+                                   ---------> Object-Oriented Programming (OOPs)
       * Templates
+      *********************************************************************************************
       * Stacks:  * Linear Data structure
                  * Abstract Data Type
                  * Recursive type data structure
                  * LIFO
+                 * Implementation: * Stack using Array
+                                   * Stack using LL
+                 * Dynamic Stack
                  * Operation:  * push()
                                * pop()
                                * top()
                                * size()
                                * isEmpty()
-                 * Implementation: * Stack using Array
-                                   * Stack using LL
-                 * Dynamic Stack
+                 
                  * Inbuilt Stack ------> #include<stack>
                                          stack<int> st;   //object of class stack.
-      * MCQs
-      
+      *********************************************************************************************
       * Queues:  * Abstract Data type
                  * FIFO
+                 * Implementation: * Queue using Array.
+                                   * Queue using LL.
+                 * Dynamic Queue
                  * Operations:  * enqueue()
                                 * dequeue()
                                 * front()
                                 * getSize()
                                 * isEmpty()
-                 * Implementation: * Queue using Array.
-                                   * Queue using LL.
-                 * Dynamic Queue
                  * Inbuilt Queue ------> #include<queue>
                                          queue<int> q;   //object pf class queue.
-                                         
+      *********************************************************************************************                                 
       problems:
       ---------
+        * MCQs
         * Stack using LL
         * Balanced Parenthesis
         * Queue using LL
@@ -358,15 +360,71 @@
 
 13) Test-2
 ***********
+      * Next Number
+      * Dequeue
+      * Delete Alternate Nodes
+      
+
+
+*******************************************************************************************************************************************************************************
+*******************************************************************************************************************************************************************************
+
+14) Trees
+***********
+      * 
+      problems:
+      ---------
+         * Print Level Wise
+         * Find Sum of Nodes
+         * Max Data Node
+         * Find Height
+         * Count Leaf Nodes
+         * Post Order Traversal
+         * Assignment:  * Contain X
+                        * Count Nodes
+                        * Node with maximum child sum
+                        * Structurally identical
+                        * Next Larger
+                        * Second Largest Element in Tree
+                        * Replace with depth
+                        
+                   
+                   
+                   
+                   
+*******************************************************************************************************************************************************************************
+*******************************************************************************************************************************************************************************
+                        
+15) Binary Trees
+******************
+      problems:
+      ---------
+         * Print Level wise
+         * Find a Node
+         * Heigth of Binary Tree
+         * Mirror
+         * Preorder Binary Tree
+         * Postorder Binary Tree
+         * Construct Tree from Preorder
+         * Construct Tree from Postorder
+         * MIn and Max of Binary Tree
+         * Assignment:  * Sum of Nodes
+                        * Check Balanced
+                        * Level Order Traversal
+                        * Remove Leaf Nodes
+                        * Level wise LL
+                        * ZigZag Tree
+                        * Nodes without siblings
 
 
 
 
 
-
-
-
-
+*******************************************************************************************************************************************************************************
+*******************************************************************************************************************************************************************************
+                        
+16) Binary Search Tree
+************************
 
 
 
