@@ -1,12 +1,13 @@
-//STATIC IMPLEMENTATION OF STACK:
-//using ARRAY
-**************************************
+//STATIC IMPLEMENTATION OF STACK (using Array):
+***********************************************
 
 * Algorithm: -------> Declare Array
              -------> declare array Size
              -------> declare array index = 0 or -1
              -------> Now perform operation such as - push(), pop(), top(), isEmpty(), size().
   
+	
+	
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -114,9 +115,10 @@ int main()
 ***********************************************************************************************************************************************************************
 
 
-//Static implementation of Stack
-//using Array (considering index=0)
-*************************************
+//Static implementation of Stack (using Array)
+(considering index=0)
+************************************************
+
 
 /*
 #include<bits/stdc++.h>
@@ -125,84 +127,77 @@ using namespace std;
 class Stack
 {
    private:
-	    int *arr;         
-		  int index;
-		  int size;
+   int *arr;         
+   int index;
+   int size;
 	
    public:
 
    //constructor
-	 Stack(int size)
-	 {
-	    arr = new int[size];
-			index = 0;
-			this->size = size;
-	 }	
+   Stack(int size)
+   {
+      arr = new int[size];
+      index = 0;
+      this->size = size;
+   }	
 		
+   int Size()
+   {
+      return index;
+   }
 		
-	 int Size()
-	 {
-	    return index;
-	 }
+   bool isEmpty()
+   {
+      if(index == 0)
+         return true;
+      return false;
+   }
 		
+   void push(int data)
+   {
+      if(index == size)
+      {
+         cout << "Stack Overflow " << endl;
+	 return;
+      }
+      arr[index] = data;
+      index++;
+   }
 		
-	 bool isEmpty()
-	 {
-	    if(index == 0)
-			   return true;
-			return false;
-	 }
+   int pop()
+   {
+      if(isEmpty())
+      {
+         cout << "Stack underflow " << endl;
+	 return INT_MIN;
+      }
+      index--;
+      return arr[index];
+   }
 		
-		
-	 void push(int data)
-	 {
-	    if(index == size)
-			{
-			   cout << "Stack Overflow " << endl;
-				 return;
-			}
-			arr[index] = data;
-			index++;
-	 }
-		
-		
-	 int pop()
-	 {
-	    if(isEmpty())
-			{
-			   cout << "Stack underflow " << endl;
-				 return INT_MIN;
-			}
-			index--;
-			return arr[index];
-	 }
-		
-		
-		
-	 int top()
-	 {
-	    if(isEmpty())
-			{
-			   cout << "Stack is Empty " << endl;
-				 return INT_MIN;
-			}
-			return arr[index - 1];
-	 }
+   int top()
+   {
+      if(isEmpty())
+      {
+         cout << "Stack is Empty " << endl;
+	 return INT_MIN;
+      }
+      return arr[index - 1];
+   }
 };
-
 
 
 
 int main()
 {
-    Stack st(5);
-    st.push(1);
-    st.push(2);
-    st.push(3);
-    st.push(4);
-    st.push(5);
-    st.push(6);
-    cout << st.top() << endl;
+   Stack st(5);
+   st.push(1);
+   st.push(2);
+   st.push(3);
+   st.push(4);
+   st.push(5);
+   st.push(6);
+   cout << st.top() << endl;
 }
 */
 
@@ -217,8 +212,8 @@ int main()
 ***********************************************************************************************************************************************************************
 
 
-//DYNAMIC implementation of Stack
-//using Array (considering index=0)
+//DYNAMIC implementation of Stack (sing Array)
+(considering index=0)
 *************************************
 
 Note: Above approach with static array implementation of stack is limited to fixed size only.
@@ -230,72 +225,72 @@ template<typename T>
 class Stack
 {
    private:
-		T *data;
-		int capacity;
-		int nextIndex;
+   T *arr;
+   int size;
+   int index;
 		
-	public:
-		Stack()
-		{
-			nextIndex = 0;
-			data = new T[4];
-			capacity = 4;
-		}
-		
-		
-		int size()
-		{
-			return nextIndex;
-		}
+   public:
+   Stack()
+   {
+      index = 0;
+      arr = new T[4];  //let assume size = 4;
+      size = 4;
+   }
 		
 		
-		bool isEmpty()
-		{
-			if(size() == 0)
-				return true;
-			return false;
-		}
+   int Size()
+   {
+      return index;
+   }
 		
 		
-		void push(T element)
-		{
-			if(nextIndex == capacity)
-			{
-				T *newData = new T[2 * capacity];
-				for(int i=0;i<capacity;i++)
-				{
-					newData[i] = data[i];
-				}
-				capacity = 2 * capacity;
-				delete[] data;
-				data = newData;
-			}
-			data[nextIndex] = element;
-			nextIndex++;
-		}
+   bool isEmpty()
+   {
+      if(size() == 0)
+         return true;
+      return false;
+   }
 		
 		
-		T pop()
-		{
-			if(isEmpty())
-			{
-				cout << "Stack empty " << endl;
-				return 0;
-			}
-			nextIndex--;
-			return data[nextIndex];
-		}
+   void push(T data)
+   {
+      if(index == size)
+      {
+         T *newArr = new T[2 * size];  //making static arry to dynamic
+	 for(int i=0;i<size;i++)
+	 {
+	    newArr[i] = arr[i];
+	 }
+	 size = (2 * size);
+	 delete[] arr;
+	 arr = newArr;
+      }
+      data[index] = data;
+      index++;
+   }
 		
 		
-		T top()
-		{
-			if(isEmpty())
-			{
-				cout << "Stack empty " << endl;
-				return 0;
-			}
-			return data[nextIndex - 1];
-		}
+   T pop()
+   {
+      if(isEmpty())
+      {
+         cout << "Stack empty " << endl;
+	 return 0;
+      }
+      index--;
+      return arr[index];
+   }
+		
+		
+   T top()
+   {
+      if(isEmpty())
+      {
+         cout << "Stack empty " << endl;
+	 return 0;
+      }
+      return arr[index - 1];
+   }
 };
 
 
@@ -303,26 +298,29 @@ class Stack
 
 int main()
 {
-	Stack<char> s;   
+   Stack<char> s;   
+   s.push(97);
+   s.push(98);
+   s.push(99);
+   s.push(100);
+   s.push(101);
 	
-	s.push(97);
-	s.push(98);
-	s.push(99);
-	s.push(100);
-	s.push(101);
-	
-	
-	cout << s.size() << endl;
-	cout << s.isEmpty() << endl;
-	cout << s.top() << endl;
-	cout << s.pop() << endl;
-	cout << s.top() << endl;
+   cout << s.Size() << endl;
+   cout << s.isEmpty() << endl;
+   cout << s.top() << endl;
+   cout << s.pop() << endl;
+   cout << s.top() << endl;
 }
 
 
 
 
 
+***********************************************************************************************************************************************************************
+***********************************************************************************************************************************************************************
+***********************************************************************************************************************************************************************
+***********************************************************************************************************************************************************************
+***********************************************************************************************************************************************************************
 
 
 
