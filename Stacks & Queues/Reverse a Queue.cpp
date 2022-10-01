@@ -79,12 +79,12 @@ int main()
 {
    int t;
    cin >> t;
-	 while (t--) 
+   while (t--) 
    {
-	    queue<int> q;
+      queue<int> q;
       int size;
       cin >> size;
-		  for (int i = 0, val; i < size; i++) 
+      for (int i = 0, val; i < size; i++) 
       {
          cin >> val;
          q.push(val);
@@ -95,7 +95,7 @@ int main()
          cout << q.front() << " ";
          q.pop();
       }
-		  cout << "\n";
+      cout << "\n";
    }
 }
 
