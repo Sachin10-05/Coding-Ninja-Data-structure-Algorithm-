@@ -371,7 +371,35 @@
 
 14) Trees
 ***********
-      * 
+      * Non-Linear Data Structure.
+      * Basic Terminologies: ---------> Root Node
+                             ---------> Leaf Node
+                             ---------> Subtree
+                             ---------> Parent Node
+                             ---------> Ancestor Node
+                             ---------> Path
+                             ---------> Degrees
+                             
+      * Types of Tree:  i) General Tree ✔
+                       ii) Forests ✖
+                      iii) Binary Tree ✔
+                       iv) Binary Search Tree (BST) ✔
+                        v) Expression Tree ✖
+                        
+      * Generic Tree:  * TreeNode class
+                       * Taking input: i) Recursive
+                                      ii) Level wise
+                       * print(): i) Recursively
+                                 ii) Level Wise
+                       * Count total Nodes
+                       * Heigth of Tree
+                       * Depth of Tree
+                       * Count Leaf nodes
+                       * Traversal -----------> * Level order Traversal
+                                   -----------> * Pre-order Traversal
+                                   -----------> * Post-order Traversal
+                                   -----------> * Inorder Traversal
+                     
       problems:
       ---------
          * Print Level Wise
