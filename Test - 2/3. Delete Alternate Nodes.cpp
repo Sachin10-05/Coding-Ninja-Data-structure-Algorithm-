@@ -24,10 +24,26 @@ Sample Output 2:
 ***********
 
 
-
-
-
-
+void deleteAlternateNodes(Node *head) 
+{
+   Node *prev = NULL;
+   Node *curr = head;
+   int i = 1;  //index
+   while(curr!=0)
+   {
+      if(i%2 == 0)
+      {
+         prev->next = curr->next;
+         curr = curr->next;
+      }
+      else
+      {
+         prev = curr;
+         curr = curr->next;
+      }
+      i++;
+    }
+}
 
 
 
