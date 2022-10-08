@@ -17,14 +17,15 @@
 
 2) Dynamic Allocation
 **********************
-      * Address Typecasting:  i) implicit Typecasting
-                              ii)Explicit Typecasting
+      * Address Typecasting: --------------> implicit Typecasting
+                             --------------> Explicit Typecasting
       * Pass By Value & Pass By Reference
-      * Dynamic Memory Allocation:    * Variables: int *x = new int;    //This dosn't mean array is "dynamic array".
-                                      * Arrays: int *arr = new int[size];
+      * Dynamic Memory Allocation:    
+              > Variables: int *x = new int;    
+              > Arrays: int *arr = new int[size]; ----------> //This dosn't mean array is "dynamic array".
       * Dynamic Memory Deallocation:  
-                                      * Variables: delete x;
-                                      * Arrays:    delete[] arr;
+              > Variables: delete x;
+              > Arrays:    delete[] arr;
       * Note:- 
               * The memory declaration using heap memory is known as dynamic memory allocation.
               * While the one using stack is known as compile-time memory allocation.
@@ -98,7 +99,7 @@
       * Quick Sort
       * String:  i)  Subsequence/ Subset ---> (2^N)
                  ii) Permutations ----------> (N!)
-                 iii)Substrings** ----------> N*(N+1)/2
+                 iii)Substrings   ----------> N*(N+1)/2  ✖✖
       problems:
       ---------
           * Replace Character recursively
@@ -113,7 +114,7 @@
                             * Return Subset of an Array
                             * Print Subsets of Array
                             * Return Subsets sum to K
-                            * Print Subsets sum to K**
+                            * Print Subsets sum to K  ✖✖
                             * Return all code - string
                             * Print All Codes - string
                             * Return Permutation - String
@@ -135,10 +136,10 @@
       *Assignments:    * Find the unique element
                        * Duplicate in Array
                        * Array Intersection
-                       * Pair Sum in Array**
-                       * Triplet Sum**
-                       * Rotate Array**
-                       * Check Array Rotation**
+                       * Pair Sum in Array  ✖✖
+                       * Triplet Sum  ✖✖
+                       * Rotate Array ✖✖
+                       * Check Array Rotation ✖✖
 
 
 
@@ -151,7 +152,7 @@
       * MCQs
       * Does s contain t?
       * Maximum profit on App
-      * Split Array**
+      * Split Array ✖✖
 
 
 
@@ -289,30 +290,33 @@
                  * Abstract Data Type
                  * Recursive type data structure
                  * LIFO
-                 * Implementation: * Stack using Array
-                                   * Stack using LL
+                 * Implementation: ---------> Stack using Array
+                                   ---------> Stack using LL
                  * Dynamic Stack
-                 * Operation:  * push()
-                               * pop()
-                               * top()
-                               * size()
-                               * isEmpty()
-                 
-                 * Inbuilt Stack ------> #include<stack>
-                                         stack<int> st;   //object of class stack.
+                 * Operation:  * push(), pop(), top(), Size(), isEmpty()
+                 * Inbuilt Stack 
+                   Ex: #include<stack>
+                       stack<int> st;  --------------------->  //object of class stack.
+                       i)  st.push()
+                       ii) st.pop()
+                       iii)st.top()
+                       iv) st.size()
+                       v) st.empty()
 
       * Queues:  * Abstract Data type
                  * FIFO
-                 * Implementation: * Queue using Array.
-                                   * Queue using LL.
+                 * Implementation: ---------> Queue using Array.
+                                   ---------> Queue using LL.
                  * Dynamic Queue
-                 * Operations:  * enqueue()
-                                * dequeue()
-                                * front()
-                                * getSize()
-                                * isEmpty()
-                 * Inbuilt Queue ------> #include<queue>
-                                         queue<int> q;   //object of class queue.
+                 * Operations:  * Enqueue(), Dequeue(), front(), getSize(), isEmpty()
+                 * Inbuilt Queue:
+                   Ex:- #include<queue>
+                        queue<int> q;  ---------------------> //object of class queue.
+                        i)  q.push()
+                        ii) q.pop()
+                        iii)q.front()
+                        iv) q.size()
+                        v) q.empty()
 
       problems:
       ---------
