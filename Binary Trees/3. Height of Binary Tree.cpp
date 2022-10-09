@@ -90,17 +90,17 @@ int height(BinaryTreeNode<int>* root)
    while(q.size() != 0)
    {
       int size = q.size();
-	  while(size--)
-	  {
-	     BinaryTreeNode<int>* front = q.front();
-		 q.pop();
-		 if(front->left)
-		    q.push(front->left);
+      while(size--)
+      {
+         BinaryTreeNode<int>* front = q.front();
+	 q.pop();
+	 if(front->left)
+	    q.push(front->left);
 				
-		 if(front->right)
-		    q.push(front->right);
-	  }
-	  h++;
+         if(front->right)
+            q.push(front->right);
+      }
+      h++;
    }
    return h;
 }
