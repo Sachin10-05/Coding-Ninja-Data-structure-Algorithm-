@@ -2,6 +2,13 @@
 problem:
 ********
 For a given Binary Tree of type integer, update it with its corresponding mirror image.
+Ex-                   1                                   1
+                    /   \                               /    \
+                   2     3                             3      2
+                 /  \    /  \                        /   \   /  \
+                4    5   6   7                     7     6   5    4
+                
+                original B.T                         Mirrored B.T
 Sample Input 1:
 1 2 3 4 5 6 7 -1 -1 -1 -1 -1 -1 -1 -1
 Sample Output 1:
