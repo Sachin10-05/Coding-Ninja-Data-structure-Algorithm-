@@ -5,7 +5,13 @@ For a given a Binary Tree of type integer, find and return the minimum and the m
 Return the output as an object of Pair class, which is already created.
 
 Note: All the node data will be unique and hence there will always exist a minimum and maximum node data.
-
+Ex:                     8
+                      /   \
+                    3       10
+                   / \        \
+                  1   6        14
+                     / \      / 
+                    4   7    13
 Sample Input 1:
 8 3 10 1 6 -1 14 -1 -1 4 7 13 -1 -1 -1 -1 -1 -1 -1
 Sample Output 1:
@@ -48,22 +54,22 @@ BinaryTreeNode<int>* takeInput()
 
 
 #include <climits>
-void Min(BinaryTreeNode<int> *root, int *min)
+void Min(BinaryTreeNode<int> *root, int &min)
 {
    if (root == NULL)
       return;
-   if ((*min) > root->data)
-      *min = root->data;
+   if (root->data < min)
+      min = root->data;
    Min(root->left, min);
    Min(root->right, min);
 }
 
-void Max(BinaryTreeNode<int> *root, int *max)
+void Max(BinaryTreeNode<int> *root, int &max)
 {
    if (root == NULL)
       return;
-   if ((*max) < root->data)
-      *max = root->data;
+   if (root->data > max)
+      max = root->data;
    Max(root->left, max);
    Max(root->right, max);
 }
@@ -75,8 +81,8 @@ pair<int, int> getMinAndMax(BinaryTreeNode<int> *root)
    if (root == NULL)
       return p;
    int min = INT_MAX, max = INT_MIN;
-   Min(root, &min);
-   Max(root, &max);
+   Min(root, min);
+   Max(root, max);
    p = {min, max};
    return p;
 }
