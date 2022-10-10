@@ -3,7 +3,8 @@ problem:
 ********
 Given a binary tree, check if it is balanced. Return true if given binary tree is balanced, false otherwise.
 Balanced Binary Tree:
-    A empty binary tree or binary tree with zero nodes is always balanced. For a non empty binary tree to be balanced, following conditions must be met:
+    A empty binary tree or binary tree with zero nodes is always balanced. For a non empty binary tree to be balanced, 
+    following conditions must be met:
           1. The left and right subtrees must be balanced.
           2. |hL - hR| <= 1, where hL is the height or depth of left subtree and hR is the height or depth of right subtree.    
           
@@ -38,7 +39,7 @@ pair<bool, int> helper(BinaryTreeNode<int> *root)
    //base case
    if(root == NULL)
    {
-      pair<bool, int> p = make_pair(true, 0);
+      pair<bool, int> p = {true,0};
       return p;
    }
     
@@ -117,11 +118,7 @@ int height(BinaryTreeNode<int> *root)
    //base case
    if(root == NULL)
       return 0;
-    
-   int left_height = height(root->left);
-   int right_height = height(root->right);
-   int ans = max(left_height, right_height) + 1;
-   return ans;
+   return max(height(root->left), height(root->right)) + 1;
 }
 
 
