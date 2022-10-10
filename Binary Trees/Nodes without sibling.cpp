@@ -11,6 +11,14 @@ Sample Input 2:
 2 4 5 6 -1 -1 7 20 30 80 90 -1 -1 -1 -1 -1 -1 -1 -1
 Sample Output 2:
 6 7  
+Explaination:               2
+                          /   \
+                         4     5
+                       /        \
+                      6          7
+                     / \        /  \
+                    20  30     80   90
+Node without siblings are: 6 and 7
 */
 
 
