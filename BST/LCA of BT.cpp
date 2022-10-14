@@ -47,35 +47,35 @@ Sample Output 3:
 ************
 
 
-#include <vector>
-void helper(BinaryTreeNode<int> *root, int k, vector<int> arr)
+int getLCA(BinaryTreeNode<int>* root , int val1 , int val2)
 {
    //base case
    if(root == NULL)
-      return;
+      return -1;
     
-   arr.push_back(root->data);
-   k = k - root->data;
-   if(!root->left && !root->right)
-   {
-      if(k==0)
-      {
-         for(int i : arr)
-            cout << i << " ";
-         cout << endl;
-      }
-      arr.pop_back();
-   }
-   helper(root->left, k, arr);
-   helper(root->right, k, arr);
+   if(root->data==val1 || root->data==val2)
+      return root->data;
+    
+   int leftAns = getLCA(root->left, val1, val2);
+   int rightAns = getLCA(root->right, val1, val2);
+    
+   //case-1:
+   if(leftAns!=-1 && rightAns!=-1)
+      return root->data;
+   
+   //case-2:
+   else if(leftAns!=-1 && rightAns==-1)
+      return leftAns;
+    
+   //case-3:
+   else if(leftAns==-1 && rightAns!=-1)
+      return rightAns;
+    
+   //case-4:
+   else
+      return -1;
 }
 
-
-void rootToLeafPathsSumToK(BinaryTreeNode<int> *root, int k)
-{
-	vector<int> arr;
-    helper(root,k,arr);
-}
 
 
 
