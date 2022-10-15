@@ -40,16 +40,16 @@ class BST
     
    public:
       //constructor
-    	BST()
-    	{
-        	root = NULL;
-    	}
+      BST()
+      {
+         root = NULL;
+      }
     
-    	//destructor
-    	~BST()
-    	{
-        	delete root;
-    	}
+      //destructor
+      ~BST()
+      {
+         delete root;
+      }
     
     
     
@@ -58,15 +58,15 @@ class BST
       bool search(BinaryTreeNode<int>* node, int data) 
       { 
          //base case
-			if (node == NULL) 
+         if (node == NULL) 
             return false; 
             
-			if (node->data == data) 
+	 if (node->data == data) 
             return true;
-			else if (data < node->data) 
+	 else if (data < node->data) 
             return search(node->left, data);
-			return search(node->right, data);
-		}
+	 return search(node->right, data);
+      }
 
     
    //operation-2: PRINT
@@ -96,15 +96,15 @@ class BST
       BinaryTreeNode<int>* insert(BinaryTreeNode<int>* root, int data)
       {
          if (root == NULL)
-        	{
+         {
             BinaryTreeNode<int> *temp = new BinaryTreeNode<int>(data);
             return temp;
-        	}
+         }
          if (data <= root->data)
             root->left = insert(root->left, data);
-        	else
+         else
             root->right = insert(root->right, data);
-			return root;
+	 return root;
      }
     
     
