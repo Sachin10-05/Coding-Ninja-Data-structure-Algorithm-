@@ -19,30 +19,27 @@ Note : main function is given for your reference which we are using internally t
 
 
 #include <iostream>
-#include <climits>
-#include <vector>
 using namespace std;
-
+#include <vector>
 
 class PriorityQueue 
 {
    private:
    vector<int> pq;
-   
+    
    public:
-   //check empty or not
    bool isEmpty() 
    { 
       return pq.size() == 0; 
    }
-  
-   //size of PQ
+
+    
    int getSize() 
    { 
       return pq.size(); 
    }
 
-   //min of PQ
+    
    int getMin() 
    {
       if (isEmpty()) 
@@ -52,8 +49,7 @@ class PriorityQueue
       return pq[0];
    }
     
-   
-   //INSERTION
+
    void insert(int element) 
    {
       pq.push_back(element);
@@ -76,48 +72,63 @@ class PriorityQueue
    }
 
     
-   //DELETION
-   int removeMin() 
+    
+   //T.C = O(nlog(n))
+   //S.C = O(N)
+   //deletion of MinHeap
+   int removeMin()
    {
-      // Write your code here
+      //check empty or not
       if(isEmpty())
          return INT_MIN;
-        
-      //step-1: Replace 0th index of array(i.e, root) with element at last index of array
+            
+      //Replace first element with last index element
       int ans = pq[0];
       pq[0] = pq[pq.size()-1];
       pq.pop_back();
         
-      //step-2: find left childIndex and right childIndex
-      int parentIndex = 0;  //i=0
-      int leftChildIndex = 2*parentIndex + 1;      //using 2*i + 1
-      int rightChildIndex = 2*parentIndex + 2;     //using 2*i + 2
-		
-      //tree will be already in CBT
-      //Now to satisfy heap order property
-      //Down-heapify:------------> move from top to bottom
+      //to maintain heap order property
+      //down-heapify
+      //i.e, we need to compare both child index with their parent Index
+      //ans swap accordingly
+        
+      int parentIndex = 0;
+      int leftChildIndex = 2*parentIndex + 1;
+      int rightChildIndex = 2*parentIndex + 2;
       while(leftChildIndex < pq.size())
       {
-         int minIndex = parentIndex;
+         int minIndex = parentIndex;   //for storing min of both child
+         //case-1:
          if(pq[minIndex] > pq[leftChildIndex])
+         {
+            //update min index
             minIndex = leftChildIndex;
+         }
             
-         if(pq[minIndex] > pq[rightChildIndex] && rightChildIndex < pq.size())
+         //case-2:
+         if(rightChildIndex < pq.size() && pq[minIndex] > pq[rightChildIndex] )
+         {
+            //update min Index
             minIndex = rightChildIndex;
+         }
             
-         if(minIndex == parentIndex)
+         //case-3:
+         if(parentIndex == minIndex)
+         {
             break;
+         }
             
          //swapping
-         int temp = pq[minIndex];
-         pq[minIndex] = pq[parentIndex];
-         pq[parentIndex] = temp;
+         int temp = pq[parentIndex];
+         pq[parentIndex] = pq[minIndex];
+         pq[minIndex] = temp;
             
+         //update parentIndex
          parentIndex = minIndex;
          leftChildIndex = 2*parentIndex + 1;
          rightChildIndex = 2*parentIndex + 2;
-      }
-      return ans;
+     }
+     return ans;
    }
 };
 
