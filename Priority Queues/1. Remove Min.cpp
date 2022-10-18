@@ -27,7 +27,7 @@ using namespace std;
 class PriorityQueue 
 {
    private:
-	 vector<int> pq;
+   vector<int> pq;
    
    public:
    //check empty or not
@@ -57,11 +57,11 @@ class PriorityQueue
    void insert(int element) 
    {
       pq.push_back(element);
-		  int childIndex = pq.size() - 1;
-		  while (childIndex > 0) 
+      int childIndex = pq.size() - 1;
+      while (childIndex > 0) 
       {
          int parentIndex = (childIndex - 1) / 2;
-			   if (pq[childIndex] < pq[parentIndex]) 
+	 if (pq[childIndex] < pq[parentIndex]) 
          {
             int temp = pq[parentIndex];
             pq[parentIndex] = pq[childIndex];
@@ -71,7 +71,7 @@ class PriorityQueue
          {
             break;
          }
-			   childIndex = parentIndex;
+	 childIndex = parentIndex;
       }
    }
 
