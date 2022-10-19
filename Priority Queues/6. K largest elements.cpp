@@ -79,17 +79,21 @@ vector<int> kLargest(int arr[], int n, int k)
 int main() 
 {
    int size;
-	 cin >> size;
-	 int *input = new int[1 + size];
+   cin >> size;
+   int *input = new int[1 + size];
    for(int i = 0; i < size; i++)
-	    cin >> input[i];
+   {
+      cin >> input[i];
+   }
    int k;
    cin >> k;
     
    vector<int> output = kLargest(input, size, k);
    for(int i = 0; i < output.size(); i++)
+   {
       cout << output[i] << endl;
-	 return 0;
+   }
+   return 0;
 }
 
 
