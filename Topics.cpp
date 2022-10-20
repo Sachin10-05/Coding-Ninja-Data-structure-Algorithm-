@@ -468,10 +468,12 @@
 18) Priority Queues
 ********************
       * What is Priority Queue?
-      * ways to implement PQ
-      * heaps
+      * ways to implement PQ ----------> i) Max Priority Queue (or Min heap)
+                             ----------> ii)Min Priority Queue (or Max heap)
+      * heaps ---> (CBT + heap order property)
       * Complete Binary Tree(CBT) & its implementation
       * Insert & Delete in Heaps
+      * Heap Sort
       problems:
       ---------
          * Remove min
