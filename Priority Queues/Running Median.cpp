@@ -60,42 +60,58 @@ void findMedian(int *arr, int n)
    for(int i=0;i<n;i++)
    {
       if(maxHeap.size()!=0  &&  arr[i]>maxHeap.top())
-    	{
+      {
          minHeap.push(arr[i]);
-    	}
-    	else
-    	{
+      }
+      else
+      {
          maxHeap.push(arr[i]);
-    	}
+      }
     
-    
-    	//keeping in check that both heap are almost of same size
-    	if(int(maxHeap.size()-minHeap.size() )> 1)
-    	{  
-    	   int x=maxHeap.top();
+      //keeping in check that both heap are almost of same size
+      if(int(maxHeap.size()-minHeap.size() )> 1)
+      {  
+         int x=maxHeap.top();
          maxHeap.pop();
          minHeap.push(x);
-    	}
-    	else if(int(minHeap.size()-maxHeap.size()) > 1)
-    	{  
+      }
+      else if(int(minHeap.size()-maxHeap.size()) > 1)
+      {  
          int x=minHeap.top();
          minHeap.pop();
        	 maxHeap.push(x);
-    	}
+      }
     
     
-    	int c=maxHeap.size()+minHeap.size();  //count
-    	//checking size of list to find median
-    	if(c%2==0)
-    	   cout<<(maxHeap.top()+minHeap.top())/2 << " ";
-   	 	else
-    	{
-    	   if(maxHeap.size()>minHeap.size())
+      int c=maxHeap.size()+minHeap.size();  //count
+      //checking size of list to find median
+      if(c%2==0)
+         cout<<(maxHeap.top()+minHeap.top())/2 << " ";
+   	  else
+      {
+         if(maxHeap.size()>minHeap.size())
             cout<<maxHeap.top() << " ";
          else
             cout<<minHeap.top() << " ";
-    	}
+      }
    }
+}
+
+
+
+
+
+int main() 
+{
+   int n;
+   cin >> n;
+   int* arr = new int[n];
+   for (int i = 0; i < n; ++i) 
+   {
+      cin >> arr[i];
+   }
+   findMedian(arr,n);
+   delete[] arr;
 }
 
 
@@ -105,10 +121,10 @@ void findMedian(int *arr, int n)
 
 
 
-
-
-
-
+****************************************************************************************************************************************************************************
+****************************************************************************************************************************************************************************
+****************************************************************************************************************************************************************************
+****************************************************************************************************************************************************************************
 
 
 
