@@ -62,7 +62,7 @@ vector<int> mergeKSortedArrays(vector<vector<int>*> arr)
       for(int j=0;j<arr[i]->size();j++)
       {
          pq.push(arr[i]->at(j));
-		  }
+      }
    }
     
    while(!pq.empty())
