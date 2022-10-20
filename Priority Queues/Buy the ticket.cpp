@@ -57,44 +57,44 @@ using namespace std;
 
 int buyTicket(int *arr, int n, int k) 
 {
-    //queue
-    queue<int> q;
-    for(int i=0;i<n;i++)
-    {
-        q.push(arr[i]);
-    }
+   //queue
+   queue<int> q;
+   for(int i=0;i<n;i++)
+   {
+      q.push(arr[i]);
+   }
     
-    //max priority queue
-	priority_queue<int> pq;   
-    for(int i=0;i<n;i++)
-    {
-        pq.push(arr[i]);
-    }
+   //max priority queue
+   priority_queue<int> pq;   
+   for(int i=0;i<n;i++)
+   {
+      pq.push(arr[i]);
+   }
     
-    int t=0;  //time
-    while(!pq.empty())
-    {
-        //acse-1
-        if(q.front() == pq.top())
-        {
-            if(k==0)
-                return t+1;
-            t++;
-            q.pop();
-            pq.pop();
+   int t=0;  //time
+   while(!pq.empty())
+   {
+      //case-1
+      if(q.front() == pq.top())
+      {
+         if(k==0)
+            return t+1;
+         t++;
+         q.pop();
+         pq.pop();
+         k--;
+      }
+      else
+      {
+         q.push(q.front());
+         q.pop();
+         if(k==0)
+            k=q.size()-1;
+         else
             k--;
-        }
-        else
-        {
-         	q.push(q.front());
-            q.pop();
-            if(k==0)
-                k=q.size()-1;
-            else
-                k--;
-        }
-    }
-    return t;
+      }
+   }
+   return t;
 }
     
 
@@ -109,6 +109,7 @@ int buyTicket(int *arr, int n, int k)
 //solution-2:
 **************
 
+/*
 #include <iostream>
 #include <vector>
 #include <queue>
@@ -116,38 +117,39 @@ using namespace std;
 
 int buyTicket(int *arr, int n, int k) 
 {
-    //queue
-    queue<int> q;
-    for(int i=0;i<n;i++)
-    {
-        q.push(i);
-    }
+   //queue
+   queue<int> q;
+   for(int i=0;i<n;i++)
+   {
+      q.push(i);
+   }
     
-    //max priority queue
-	priority_queue<int> pq;   
-    for(int i=0;i<n;i++)
-    {
-        pq.push(arr[i]);
-    }
+   //max priority queue
+   priority_queue<int> pq;   
+   for(int i=0;i<n;i++)
+   {
+      pq.push(arr[i]);
+   }
     
-    int t=0; //time
-    while(q.front()!=k  ||  pq.top()!=arr[q.front()])
-    {
-        if(pq.top() > arr[q.front()])
-        {
-            int x = q.front();
-            q.pop();
-            q.push(x);
-        }
-        else if(pq.top()==arr[q.front()])
-    	{
-        	pq.pop();
-      		q.pop();
-       		t++;			//increase time
-    	}
-    }
-    return t+1;
+   int t=0; //time
+   while(q.front()!=k  ||  pq.top()!=arr[q.front()])
+   {
+      if(pq.top() > arr[q.front()])
+      {
+         int x = q.front();
+         q.pop();
+         q.push(x);
+      }
+      else if(pq.top()==arr[q.front()])
+      {
+         pq.pop();
+      	 q.pop();
+       	 t++;	  //increase time
+      }
+   }
+   return t+1;
 }
+*/
 
 
 
@@ -167,25 +169,20 @@ using namespace std;
 
 #include "solution.h"
 
-int main() {
-    int n;
-    cin >> n;
-
-    int *arr = new int[n];
-
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
-    }
-
-    int k;
-    cin >> k;
-
-    cout << buyTicket(arr, n, k);
-
-    delete[] arr;
+int main() 
+{
+   int n;
+   cin >> n;
+   int *arr = new int[n];
+   for (int i = 0; i < n; i++) 
+   {
+      cin >> arr[i];
+   }
+   int k;
+   cin >> k;
+   cout << buyTicket(arr, n, k);
+   delete[] arr;
 }
-
-
 
 
 
