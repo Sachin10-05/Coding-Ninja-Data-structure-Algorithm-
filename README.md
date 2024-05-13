@@ -1,13 +1,19 @@
 # Data Structure in C++
-Below are the topics covered week wise and are arranged in sequential order. <br />
-<br />
-My Certificates: <br />
-Completion Certificate: [CLICK HERE](https://github.com/Sachin10-05/Data_structure_in_cpp_coding_ninja/blob/main/Complete%20Certificate.pdf)  <br/>
-Certification of Excellence: [CLICK HERE](https://github.com/Sachin10-05/Data_structure_in_cpp_coding_ninja/blob/main/Certificate%20Of%20Excellene.pdf) <br/>
-</br>
-Notes: <br />
-To view Notes: [CLICK HERE]()
-<br />
+Below are the topics covered week wise and are arranged in sequential order. <br /> <br />
+
+### My Certificates: <br />
+Certification of Completion: [CLICK HERE](https://github.com/Sachin10-05/Data_structure_in_cpp_coding_ninja/blob/main/Complete%20Certificate.pdf)  <br/>
+Certification of Excellence: [CLICK HERE](https://github.com/Sachin10-05/Data_structure_in_cpp_coding_ninja/blob/main/Certificate%20Of%20Excellene.pdf) <br/> </br>
+
+### Notes: <br />
+To view Notes: [CLICK HERE](https://github.com/Sachin10-05/Data_structure_in_cpp_coding_ninja/upload/main/Notes)
+<br /> <br />
+
+### Syllabus: <br />
+C++ and DSA: [CLICK HERE](https://github.com/Sachin10-05/Data_structure_in_cpp_coding_ninja/blob/main/C%2B%2B%20%26%20DSA%20syllabus.pdf)
+Competitive Coding: [CLICK HERE](https://github.com/Sachin10-05/Data_structure_in_cpp_coding_ninja/blob/main/Competitive%20Coding%20Syllabus.pdf)
+<br /> <br />
+
 
 
 ## Week-1:
