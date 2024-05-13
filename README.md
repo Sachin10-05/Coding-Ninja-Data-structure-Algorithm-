@@ -10,7 +10,7 @@ To view Notes: [CLICK HERE](https://github.com/Sachin10-05/Data_structure_in_cpp
 <br /> <br />
 
 ### Syllabus: <br />
-C++ and DSA: [CLICK HERE](https://github.com/Sachin10-05/Data_structure_in_cpp_coding_ninja/blob/main/C%2B%2B%20%26%20DSA%20syllabus.pdf)
+C++ and DSA: [CLICK HERE](https://github.com/Sachin10-05/Data_structure_in_cpp_coding_ninja/blob/main/C%2B%2B%20%26%20DSA%20syllabus.pdf) <br />
 Competitive Coding: [CLICK HERE](https://github.com/Sachin10-05/Data_structure_in_cpp_coding_ninja/blob/main/Competitive%20Coding%20Syllabus.pdf)
 <br /> <br />
 
